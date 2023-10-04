@@ -1,0 +1,65 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "ServiceForm.h"
+#include "DataModuleUnit.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TServiceFormUnit *ServiceFormUnit;
+//---------------------------------------------------------------------------
+__fastcall TServiceFormUnit::TServiceFormUnit(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TServiceFormUnit::ServiceSortCBSelect(TObject *Sender)
+{
+        switch(ServiceSortCB->ItemIndex)
+        {
+                case 0: DM->AllServiceTBL->IndexName ="RDB$PRIMARY22";break;
+                case 1: DM->AllServiceTBL->IndexName ="SERVICETBLNAMENDX";break;
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TServiceFormUnit::ServiceGridExit(TObject *Sender)
+{
+        if(DM->AllServiceTBL->State==dsInsert || DM->AllServiceTBL->State==dsEdit)
+               DM->AllServiceTBL->Post();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TServiceFormUnit::ServiceEditChange(TObject *Sender)
+{
+        TLocateOptions Opts;
+        Opts.Clear();
+        Opts << loPartialKey;
+        Opts << loCaseInsensitive;
+        DM->AllServiceTBL->Locate("NAME", ServiceEdit->Text, Opts);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TServiceFormUnit::ServiceButtonSelectClick(TObject *Sender)
+{
+        DM->RepairServiceTBL->Append();
+        DM->RepairServiceTBL->FieldByName("SERVICE_ID")->AsInteger=
+        DM->AllServiceTBL->FieldByName("ID")->AsInteger;
+        DM->RepairServiceTBL->FieldByName("REPAIR_ID")->AsInteger=
+        DM->RepairTBL->FieldByName("ID")->AsInteger;
+        DM->RepairServiceTBL->FieldByName("TOTAL_PRICE")->AsInteger= 0;
+        DM->RepairServiceTBL->Post();
+        ServiceFormUnit->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TServiceFormUnit::FormClose(TObject *Sender,
+      TCloseAction &Action)
+{
+        if(ServiceButtonSelect->Visible == true)
+                ServiceButtonSelect->Visible = false;
+}
+//---------------------------------------------------------------------------
+

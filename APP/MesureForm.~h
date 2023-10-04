@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#ifndef MesureFormH
+#define MesureFormH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <DBCtrls.hpp>
+#include <DBGrids.hpp>
+#include <ExtCtrls.hpp>
+#include <Grids.hpp>
+//---------------------------------------------------------------------------
+class TMeasureFormUnit : public TForm
+{
+__published:	// IDE-managed Components
+        TDBNavigator *MesureDBNavigator;
+        TDBGrid *MesureGrid;
+        TPanel *MesurePanel;
+        TButton *MesureButton;
+private:	// User declarations
+public:		// User declarations
+        __fastcall TMeasureFormUnit(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TMeasureFormUnit *MeasureFormUnit;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,77 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
+USEFORM("MainUnit.cpp", MainFormUnit);
+USEFORM("DataModuleUnit.cpp", DM); /* TDataModule: File Type */
+USEFORM("EmployeeForm.cpp", EmployeeFormUnit);
+USEFORM("VehicleForm.cpp", VehicleNomFormUnit);
+USEFORM("RepairForm.cpp", RepairShopFormUnit);
+USEFORM("ServiceForm.cpp", ServiceFormUnit);
+USEFORM("PartForm.cpp", PartFormUnit);
+USEFORM("OwnerForm.cpp", OwnerFormUnit);
+USEFORM("BrandForm.cpp", BrandFormUnit);
+USEFORM("CategoryForm.cpp", CategoryFormUnit);
+USEFORM("TypeForm.cpp", TypeFormUnit);
+USEFORM("EngineForm.cpp", EngineFormUnit);
+USEFORM("ManufacturerForm.cpp", ManufacturerFormUnit);
+USEFORM("MesureForm.cpp", MesureFormUnit);
+USEFORM("PossitionForm.cpp", PossitionFormUnit);
+USEFORM("EditVehicleForm.cpp", EditVehicleFormUnit);
+USEFORM("EditPartForm.cpp", RepairEditFormUnit);
+USEFORM("ItemForm.cpp", ItemNomFormUnit);
+USEFORM("AnalysisForm.cpp", AnalysisFormUnit);
+USEFORM("LogInForm.cpp", LogInFormUnit);
+USEFORM("CreateAccForm.cpp", CreateAccFormUnit);
+USEFORM("ReferenceForm.cpp", ReferenceFromUnit);
+USEFORM("ChartForm.cpp", ChartFormUnit);
+//---------------------------------------------------------------------------
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+{
+        try
+        {
+                 Application->Initialize();
+                 Application->CreateForm(__classid(TMainFormUnit), &MainFormUnit);
+                 Application->CreateForm(__classid(TDM), &DM);
+                 Application->CreateForm(__classid(TEmployeeFormUnit), &EmployeeFormUnit);
+                 Application->CreateForm(__classid(TVehicleNomFormUnit), &VehicleNomFormUnit);
+                 Application->CreateForm(__classid(TRepairShopFormUnit), &RepairShopFormUnit);
+                 Application->CreateForm(__classid(TServiceFormUnit), &ServiceFormUnit);
+                 Application->CreateForm(__classid(TPartFormUnit), &PartFormUnit);
+                 Application->CreateForm(__classid(TOwnerFormUnit), &OwnerFormUnit);
+                 Application->CreateForm(__classid(TBrandFormUnit), &BrandFormUnit);
+                 Application->CreateForm(__classid(TCategoryFormUnit), &CategoryFormUnit);
+                 Application->CreateForm(__classid(TTypeFormUnit), &TypeFormUnit);
+                 Application->CreateForm(__classid(TEngineFormUnit), &EngineFormUnit);
+                 Application->CreateForm(__classid(TManufacturerFormUnit), &ManufacturerFormUnit);
+                 Application->CreateForm(__classid(TMesureFormUnit), &MesureFormUnit);
+                 Application->CreateForm(__classid(TPossitionFormUnit), &PossitionFormUnit);
+                 Application->CreateForm(__classid(TEditVehicleFormUnit), &EditVehicleFormUnit);
+                 Application->CreateForm(__classid(TRepairEditFormUnit), &RepairEditFormUnit);
+                 Application->CreateForm(__classid(TItemNomFormUnit), &ItemNomFormUnit);
+                 Application->CreateForm(__classid(TAnalysisFormUnit), &AnalysisFormUnit);
+                 Application->CreateForm(__classid(TLogInFormUnit), &LogInFormUnit);
+                 Application->CreateForm(__classid(TCreateAccFormUnit), &CreateAccFormUnit);
+                 Application->CreateForm(__classid(TReferenceFromUnit), &ReferenceFromUnit);
+                 Application->CreateForm(__classid(TChartFormUnit), &ChartFormUnit);
+                 Application->Run();
+        }
+        catch (Exception &exception)
+        {
+                 Application->ShowException(&exception);
+        }
+        catch (...)
+        {
+                 try
+                 {
+                         throw Exception("");
+                 }
+                 catch (Exception &exception)
+                 {
+                         Application->ShowException(&exception);
+                 }
+        }
+        return 0;
+}
+//---------------------------------------------------------------------------

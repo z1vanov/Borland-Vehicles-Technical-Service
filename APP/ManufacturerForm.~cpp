@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "ManufacturerForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TManufacturerFormUnit *ManufacturerFormUnit;
+//---------------------------------------------------------------------------
+__fastcall TManufacturerFormUnit::TManufacturerFormUnit(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#ifndef RepairFormH
+#define RepairFormH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ComCtrls.hpp>
+#include <DBGrids.hpp>
+#include <ExtCtrls.hpp>
+#include <Grids.hpp>
+#include <DBCtrls.hpp>
+//---------------------------------------------------------------------------
+class TRepairShopFormUnit : public TForm
+{
+__published:	// IDE-managed Components
+        TPanel *RShopPanel;
+        TLabel *RShopLabelSort;
+        TLabel *RShopLabelSearch;
+        TEdit *RShopEdit;
+        TComboBox *RShopSortCB;
+        TButton *RShopButtonSelect;
+        TDBNavigator *RShopDBNavigator;
+        TDBGrid *RShopGrid;
+        void __fastcall RShopButtonSelectClick(TObject *Sender);
+        void __fastcall RShopEditChange(TObject *Sender);
+        void __fastcall RShopSortCBSelect(TObject *Sender);
+        void __fastcall RShopGridColExit(TObject *Sender);
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TRepairShopFormUnit(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TRepairShopFormUnit *RepairShopFormUnit;
+//---------------------------------------------------------------------------
+#endif

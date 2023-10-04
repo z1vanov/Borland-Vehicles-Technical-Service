@@ -1,0 +1,372 @@
+object ReferenceFromUnit: TReferenceFromUnit
+  Left = 52
+  Top = 106
+  Width = 1447
+  Height = 539
+  Caption = #1057#1087#1088#1072#1074#1082#1080
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ReferenceGrid: TDBGrid
+    Left = 0
+    Top = 153
+    Width = 1431
+    Height = 347
+    Align = alClient
+    DataSource = DM.ReferenceItemDS
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Charset = RUSSIAN_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -13
+    TitleFont.Name = '@Arial Unicode MS'
+    TitleFont.Style = [fsBold]
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1431
+    Height = 153
+    Align = alTop
+    BevelOuter = bvLowered
+    BevelWidth = 2
+    TabOrder = 1
+    object AcceptanceDateToLabel: TLabel
+      Left = 8
+      Top = 104
+      Width = 20
+      Height = 16
+      Caption = #1044#1086
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object AcceptanceDateFromLabel: TLabel
+      Left = 8
+      Top = 56
+      Width = 20
+      Height = 16
+      Caption = #1054#1090
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object CompltionDateFromLabel: TLabel
+      Left = 224
+      Top = 56
+      Width = 20
+      Height = 16
+      Caption = #1054#1090
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object CompletionDateToLabel: TLabel
+      Left = 224
+      Top = 104
+      Width = 20
+      Height = 16
+      Caption = #1044#1086
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object BrandLabel: TLabel
+      Left = 592
+      Top = 56
+      Width = 48
+      Height = 16
+      Caption = #1052#1072#1088#1082#1072
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object RShopLabel: TLabel
+      Left = 440
+      Top = 104
+      Width = 56
+      Height = 16
+      Caption = #1057#1077#1088#1074#1080#1079
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object RegNumLabel: TLabel
+      Left = 440
+      Top = 56
+      Width = 81
+      Height = 16
+      Caption = #1056#1077#1075'. '#1085#1086#1084#1077#1088
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object MessageLabel1: TLabel
+      Left = 8
+      Top = 8
+      Width = 206
+      Height = 25
+      Caption = #1044#1072#1090#1072' '#1085#1072' '#1087#1088#1080#1089#1090#1080#1075#1072#1085#1077'  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object MessageLabel2: TLabel
+      Left = 224
+      Top = 8
+      Width = 215
+      Height = 25
+      Caption = #1044#1072#1090#1072' '#1085#1072' '#1079#1072#1074#1098#1088#1096#1074#1072#1085#1077'  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object MessageLabel3: TLabel
+      Left = 440
+      Top = 8
+      Width = 235
+      Height = 25
+      Caption = #1044#1086#1087#1098#1083#1085#1080#1090#1077#1083#1085#1080' '#1092#1080#1083#1090#1088#1080'  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object MessageLabel4: TLabel
+      Left = 744
+      Top = 8
+      Width = 151
+      Height = 25
+      Caption = #1055#1086#1082#1072#1079#1074#1072#1085#1077' '#1085#1072':  '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object AcceptanceToDateTimePicker: TDateTimePicker
+      Left = 8
+      Top = 120
+      Width = 186
+      Height = 26
+      CalAlignment = dtaLeft
+      Date = 44446.7778033681
+      Time = 44446.7778033681
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      Kind = dtkDate
+      ParseInput = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object AcceptanceFromDateTimePicker: TDateTimePicker
+      Left = 8
+      Top = 72
+      Width = 186
+      Height = 26
+      CalAlignment = dtaLeft
+      Date = 44446.778048831
+      Time = 44446.778048831
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      Kind = dtkDate
+      ParseInput = False
+      ParentFont = False
+      TabOrder = 1
+    end
+    object CompletionFromDateTimePicker: TDateTimePicker
+      Left = 224
+      Top = 72
+      Width = 186
+      Height = 26
+      CalAlignment = dtaLeft
+      Date = 44446.7781209028
+      Time = 44446.7781209028
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      Kind = dtkDate
+      ParseInput = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object CompletionToDateTimePicker: TDateTimePicker
+      Left = 224
+      Top = 120
+      Width = 186
+      Height = 26
+      CalAlignment = dtaLeft
+      Date = 44446.7781762731
+      Time = 44446.7781762731
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      Kind = dtkDate
+      ParseInput = False
+      ParentFont = False
+      TabOrder = 3
+    end
+    object BrandEdit: TEdit
+      Left = 592
+      Top = 72
+      Width = 121
+      Height = 26
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+    end
+    object RegNumEdit: TEdit
+      Left = 440
+      Top = 72
+      Width = 121
+      Height = 26
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+    end
+    object RShopEdit: TEdit
+      Left = 440
+      Top = 120
+      Width = 273
+      Height = 26
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
+    object ShowButton: TButton
+      Left = 992
+      Top = 64
+      Width = 105
+      Height = 41
+      Caption = #1055#1086#1082#1072#1079#1074#1072#1085#1077
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 7
+      OnClick = ShowButtonClick
+    end
+    object ExportButton: TButton
+      Left = 992
+      Top = 104
+      Width = 105
+      Height = 41
+      Caption = #1045#1082#1089#1087#1086#1088#1090' '
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+      OnClick = ExportButtonClick
+    end
+    object ExportMemo: TMemo
+      Left = 1136
+      Top = 8
+      Width = 185
+      Height = 89
+      Lines.Strings = (
+        '')
+      TabOrder = 9
+      Visible = False
+    end
+    object RadioGroup: TRadioGroup
+      Left = 744
+      Top = 56
+      Width = 217
+      Height = 89
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = '@Arial Unicode MS'
+      Font.Style = [fsBold]
+      ItemIndex = 0
+      Items.Strings = (
+        #1056#1077#1084#1086#1085#1090#1080
+        #1040#1088#1090#1080#1082#1091#1083#1080)
+      ParentFont = False
+      TabOrder = 10
+    end
+  end
+  object SaveDialog: TSaveDialog
+    Left = 1136
+    Top = 104
+  end
+end
