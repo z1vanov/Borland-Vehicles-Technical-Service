@@ -1,0 +1,119 @@
+object LogInFormUnit: TLogInFormUnit
+  Left = 591
+  Top = 251
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = #1042#1083#1080#1079#1072#1085#1077
+  ClientHeight = 216
+  ClientWidth = 284
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object UsernameLabel: TLabel
+    Left = 64
+    Top = 24
+    Width = 134
+    Height = 18
+    Caption = #1055#1086#1090#1088#1077#1073#1080#1090#1077#1083#1089#1082#1086' '#1080#1084#1077
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object PasswordLabel: TLabel
+    Left = 64
+    Top = 72
+    Width = 50
+    Height = 18
+    Caption = #1055#1072#1088#1086#1083#1072
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object MessageLabel: TLabel
+    Left = 72
+    Top = 120
+    Width = 4
+    Height = 15
+    Alignment = taCenter
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object UsernameEdit: TEdit
+    Left = 64
+    Top = 40
+    Width = 153
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = PasswordEditClick
+  end
+  object PasswordEdit: TEdit
+    Left = 64
+    Top = 88
+    Width = 153
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 1
+    OnClick = PasswordEditClick
+  end
+  object LogInButton: TButton
+    Left = 64
+    Top = 152
+    Width = 73
+    Height = 33
+    Caption = #1042#1083#1080#1079#1072#1085#1077
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = LogInButtonClick
+  end
+  object CanselButton: TButton
+    Left = 144
+    Top = 152
+    Width = 73
+    Height = 33
+    Caption = #1048#1079#1093#1086#1076
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = CanselButtonClick
+  end
+end
