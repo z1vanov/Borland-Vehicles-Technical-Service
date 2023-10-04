@@ -1,0 +1,156 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include <limits.h>
+#pragma hdrstop
+
+#include "AnalysisForm.h"
+#include "DataModuleUnit.h"
+#include "ChartForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TAnalysisFormUnit *AnalysisFormUnit;
+//---------------------------------------------------------------------------
+__fastcall TAnalysisFormUnit::TAnalysisFormUnit(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TAnalysisFormUnit::BrandMaxButtonClick(TObject *Sender)
+{
+        DM->RepairCountQuery->First();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::BrandMinButtonClick(TObject *Sender)
+{
+        DM->RepairCountQuery->Last();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TAnalysisFormUnit::SearchServiceButtonClick(TObject *Sender)
+{
+        DM->ServiceCountQuery->Close();
+        if(SearchServiceEdit->Text.IsEmpty())
+                DM->ServiceCountQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        else
+                DM->ServiceCountQuery->ParamByName("PBRANDNAME")->AsString = SearchServiceEdit->Text;
+        DM->ServiceCountQuery->Open();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::SearchBrandEditChange(TObject *Sender)
+{
+        AnsiString FieldName ="NAME";
+        TLocateOptions Opts;
+        Opts.Clear();
+        Opts << loPartialKey;
+        Opts << loCaseInsensitive;
+        DM->RepairCountQuery->Locate(FieldName, SearchBrandEdit->Text, Opts);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TAnalysisFormUnit::ClearServiceButtonClick(
+      TObject *Sender)
+{
+        DM->ServiceCountQuery->Close();
+        DM->ServiceCountQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        DM->ServiceCountQuery->Open();
+        SearchServiceEdit->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::ServiceMaxButtonClick(TObject *Sender)
+{
+        DM->ServiceCountQuery->First();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::ServiceMinButtonClick(TObject *Sender)
+{
+        DM->ServiceCountQuery->Last();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::PriceMaxButtonClick(TObject *Sender)
+{
+        DM->PriceQuery->First();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::PriceMinButtonClick(TObject *Sender)
+{
+        DM->PriceQuery->Last();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TAnalysisFormUnit::ClearPriceButtonClick(TObject *Sender)
+{
+        DM->PriceQuery->Close();
+        DM->PriceQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        DM->PriceQuery->Open();
+        SearchPriceEdit->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::SearchPriceButtonClick(TObject *Sender)
+{
+        DM->PriceQuery->Close();
+        if(SearchServiceEdit->Text.IsEmpty())
+                DM->PriceQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        else
+                DM->PriceQuery->ParamByName("PBRANDNAME")->AsString = SearchPriceEdit->Text;
+        DM->PriceQuery->Open();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TAnalysisFormUnit::FormShow(TObject *Sender)
+{
+        DM->RepairCountQuery->Close();
+        DM->RepairCountQuery->Open();
+        DM->ServiceCountQuery->Close();
+        DM->ServiceCountQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        DM->ServiceCountQuery->Open();
+        DM->PriceQuery->Close();
+        DM->PriceQuery->ParamByName("PBRANDNAME")->AsString = '%';
+        DM->PriceQuery->Open();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TAnalysisFormUnit::BitBtn1Click(TObject *Sender)
+{
+        ChartFormUnit->QRDBChart1->Series[0]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[1]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[2]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[0]->Active = true;
+        ChartFormUnit->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::BitBtn2Click(TObject *Sender)
+{
+        ChartFormUnit->QRDBChart1->Series[0]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[1]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[2]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[1]->Active = true;
+        ChartFormUnit->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TAnalysisFormUnit::BitBtn3Click(TObject *Sender)
+{
+        ChartFormUnit->QRDBChart1->Series[0]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[1]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[2]->Active = false;
+        ChartFormUnit->QRDBChart1->Series[2]->Active = true;
+        ChartFormUnit->Show();
+}
+//---------------------------------------------------------------------------
+

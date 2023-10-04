@@ -1,0 +1,106 @@
+object CreateAccFormUnit: TCreateAccFormUnit
+  Left = 277
+  Top = 166
+  BorderStyle = bsDialog
+  Caption = 'CreateAccFormUnit'
+  ClientHeight = 233
+  ClientWidth = 393
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object EmployeeNameLabel: TLabel
+    Left = 16
+    Top = 56
+    Width = 22
+    Height = 13
+    Caption = #1048#1084#1077
+  end
+  object EmployeeFamLabel: TLabel
+    Left = 208
+    Top = 56
+    Width = 49
+    Height = 13
+    Caption = #1060#1072#1084#1080#1083#1080#1103
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 120
+    Width = 149
+    Height = 13
+    Caption = #1048#1079#1073#1086#1088' '#1085#1072' '#1087#1086#1090#1088#1077#1073#1080#1090#1077#1083#1089#1082#1086' '#1080#1084#1077
+  end
+  object Label4: TLabel
+    Left = 208
+    Top = 120
+    Width = 86
+    Height = 13
+    Caption = #1048#1079#1073#1086#1088' '#1085#1072' '#1087#1072#1088#1086#1083#1072
+  end
+  object EmployeeNameEdit: TEdit
+    Left = 16
+    Top = 72
+    Width = 161
+    Height = 21
+    Color = clCream
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object SelectEmployeeButton: TButton
+    Left = 32
+    Top = 16
+    Width = 129
+    Height = 25
+    Caption = #1048#1079#1073#1086#1088' '#1085#1072' '#1089#1083#1091#1078#1080#1090#1077#1083
+    TabOrder = 1
+    OnClick = SelectEmployeeButtonClick
+  end
+  object EmployeeFamEdit: TEdit
+    Left = 208
+    Top = 72
+    Width = 161
+    Height = 21
+    Color = clCream
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object UsernameEdit: TEdit
+    Left = 16
+    Top = 136
+    Width = 161
+    Height = 21
+    TabOrder = 3
+  end
+  object PasswordEdit: TEdit
+    Left = 208
+    Top = 136
+    Width = 161
+    Height = 21
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 32
+    Top = 176
+    Width = 129
+    Height = 33
+    Caption = #1055#1086#1090#1074#1098#1088#1078#1076#1072#1074#1072#1085#1077
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 224
+    Top = 176
+    Width = 129
+    Height = 33
+    Caption = #1054#1090#1082#1072#1079
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+end
